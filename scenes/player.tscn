@@ -17,3 +17,5 @@ offset_bottom = 21.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1389987847]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_ifeun")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=129115283]

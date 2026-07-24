@@ -5,8 +5,9 @@
 
 [node name="Room_1" type="Node2D" unique_id=545502306]
 script = ExtResource("1_0tsjr")
-velocity = null
 
 [node name="Player" parent="." unique_id=1033421392 instance=ExtResource("2_vu5en")]
 
-[node name="Camera" type="Camera2D" parent="." unique_id=398876273]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1925035544]
+offset_right = 40.0
+offset_bottom = 40.0
