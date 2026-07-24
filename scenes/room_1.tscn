@@ -3,11 +3,47 @@
 [ext_resource type="Script" uid="uid://dinse08pnjwdg" path="res://scripts/room_1.gd" id="1_0tsjr"]
 [ext_resource type="PackedScene" uid="uid://b6h06310h6ryw" path="res://scenes/player.tscn" id="2_vu5en"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ifeun"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ifeun"]
+a = Vector2(-576, 322)
+b = Vector2(574, 322)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_1x3kl"]
+a = Vector2(576, -324)
+b = Vector2(-576, -324)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_vu5en"]
+a = Vector2(576, 324)
+b = Vector2(576, -324)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_8oql1"]
+a = Vector2(-576, -324)
+b = Vector2(-576, 324)
+
 [node name="Room_1" type="Node2D" unique_id=545502306]
 script = ExtResource("1_0tsjr")
 
-[node name="Player" parent="." unique_id=1033421392 instance=ExtResource("2_vu5en")]
+[node name="Walls" type="StaticBody2D" parent="." unique_id=352132569]
+physics_material_override = SubResource("PhysicsMaterial_ifeun")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1925035544]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="lower_wall" type="CollisionShape2D" parent="Walls" unique_id=961541022]
+shape = SubResource("SegmentShape2D_ifeun")
+
+[node name="upper_wall" type="CollisionShape2D" parent="Walls" unique_id=768748231]
+shape = SubResource("SegmentShape2D_1x3kl")
+
+[node name="right_wall" type="CollisionShape2D" parent="Walls" unique_id=1042643329]
+shape = SubResource("SegmentShape2D_vu5en")
+
+[node name="left_wall" type="CollisionShape2D" parent="Walls" unique_id=455769711]
+shape = SubResource("SegmentShape2D_8oql1")
+
+[node name="temp_floor" type="ColorRect" parent="." unique_id=1925035544]
+offset_left = -576.0
+offset_top = -323.0
+offset_right = 575.0
+offset_bottom = 324.0
+color = Color(0.39970902, 0.58248866, 0.23509562, 1)
+
+[node name="Player" parent="." unique_id=1033421392 instance=ExtResource("2_vu5en")]
