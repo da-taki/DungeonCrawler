@@ -11,12 +11,17 @@ config_version=5
 [application]
 
 config/name="DungeonCrawl"
+run/main_scene="uid://bv3wbgp5xryua"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 [physics]
 
