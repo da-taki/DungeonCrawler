@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ifeun"]
 size = Vector2(40, 40)
 
-[node name="Player" type="CharacterBody2D" unique_id=1033421392]
+[node name="Player" type="CharacterBody2D" unique_id=1033421392 groups=["player"]]
 script = ExtResource("1_3vyb7")
 
 [node name="temp_sprite" type="ColorRect" parent="." unique_id=127796772]

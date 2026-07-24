@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dinse08pnjwdg" path="res://scripts/room_1.gd" id="1_0tsjr"]
 [ext_resource type="PackedScene" uid="uid://b6h06310h6ryw" path="res://scenes/player.tscn" id="2_vu5en"]
+[ext_resource type="PackedScene" uid="uid://3voi0uus816l" path="res://scenes/enemy.tscn" id="3_8oql1"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ifeun"]
 
@@ -47,3 +48,6 @@ offset_bottom = 324.0
 color = Color(0.39970902, 0.58248866, 0.23509562, 1)
 
 [node name="Player" parent="." unique_id=1033421392 instance=ExtResource("2_vu5en")]
+
+[node name="Enemy" parent="." unique_id=1907058693 instance=ExtResource("3_8oql1")]
+position = Vector2(-392.45355, -189.42337)
